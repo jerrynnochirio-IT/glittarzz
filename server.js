@@ -100,13 +100,20 @@ app.get("/api/announcement", (req, res) => {
   });
 });
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server running on http://localhost:${process.env.PORT}`);
-});
+const PORT = process.env.PORT || 3000;
+
 app.get("/admin", (req, res) => {
-  res.sendFile(__dirname + "/views/admin.html");
+  res.sendFile(path.join(__dirname, "views", "admin.html"));
 });
 
 app.get("/checkout", (req, res) => {
-  res.sendFile(__dirname + "/views/checkout.html");
+  res.sendFile(path.join(__dirname, "views", "checkout.html"));
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
+app.listen(process.env.PORT, () => {
+  console.log(`Server running on http://localhost:${process.env.PORT}`);
 });
