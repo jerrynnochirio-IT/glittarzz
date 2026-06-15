@@ -1,0 +1,274 @@
+:root {
+  --gold: #ffb703;
+  --black: #000;
+  --white: #fff;
+}
+
+body {
+  font-family: Segoe UI;
+  background: #f8f9fa;
+}
+
+.announcement {
+  background: var(--gold);
+  padding: 10px;
+  font-weight: bold;
+}
+
+.navbar {
+  background: #000;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--gold) !important;
+}
+
+.cart-btn {
+  position: relative;
+}
+
+#cartCount {
+  background: var(--gold);
+  color: #000;
+  border-radius: 50%;
+  padding: 3px 8px;
+  font-size: 12px;
+}
+
+.hero {
+  height: 85vh;
+
+  background: radial-gradient(
+    circle at top right,
+    #ffb703,
+    #111111 40%,
+    #000000 100%
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  background: rgba(255, 183, 3, 0.15);
+
+  border-radius: 50%;
+
+  top: -150px;
+  right: -100px;
+
+  filter: blur(50px);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+}
+
+.category-btn {
+  background: white;
+  border: 2px solid var(--gold);
+
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 30px;
+
+  font-weight: bold;
+}
+
+.active {
+  background: var(--gold);
+}
+
+.product-card {
+  background: white;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  transition: 0.4s;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+  height: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 15px 30px rgba(255, 183, 3, 0.6);
+}
+
+.image-box {
+  height: 250px;
+
+  padding: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+.price {
+  font-size: 25px;
+  font-weight: 700;
+  color: #ffb703;
+}
+
+.buy-btn {
+  background: #000;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
+
+/* ===================================
+   MOBILE RESPONSIVE DESIGN
+=================================== */
+
+@media screen and (max-width: 992px) {
+  .navbar-brand {
+    font-size: 1.6rem;
+  }
+
+  .hero {
+    height: 70vh;
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .category-btn {
+    margin: 4px;
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .product-card {
+    margin-bottom: 15px;
+  }
+
+  .image-box {
+    height: 180px;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+
+  .buy-btn {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .announcement {
+    font-size: 12px;
+  }
+
+  .hero {
+    height: 55vh;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .category-btn {
+    width: 100%;
+    margin-bottom: 8px;
+    border-radius: 8px;
+  }
+
+  .image-box {
+    height: 160px;
+  }
+
+  .product-card h5 {
+    font-size: 15px;
+  }
+
+  .price {
+    font-size: 18px;
+  }
+}
